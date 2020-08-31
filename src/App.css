@@ -4,27 +4,89 @@
     box-sizing: border-box;
 }
 
-.App{
-    margin: 10px;
-    padding :10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+body{
+    background : #201335;
 }
 
-button{
-    margin : 5px;
-
+.App{
+    background : #201335;
 }
 
 .mainpage{
-    display: flex;
-    flex-direction: column;
-    text-align : center;
-    box-shadow: 6px 6px 20px 0px rgba(0,0,0,0.2);
-    padding : 8vh;
+    margin-top: 5vh;
+    display: grid;
+    grid-template-columns: 23% 23% 23% 23%;
+    grid-column-gap: 2%;
+}
+
+#cart{
+    margin-top: 5vh;
+    background : #fffded;
+    color: #201335;
+    border: none;
+}
+
+.badge{
+    background : #201335;
+    color : #fffded;
+}
+
+.itemTitle{
+    color : #ffb17a
+}
+
+#decrease,#increase{
+    background : #fffded;
+    color : #201335
+}
+
+.itemQuantity{
+    color : #fffded;
+    padding : 3vw;
+}
+
+.btn{
+    background : #fce762 ;
+    border : none;
+    color : #201335;
+}
+
+.item{
+    border: none;
+    background : #4f4789;
+    box-shadow: 2px 5px 10px 2px rgba(0,0,0,0.5);
+    border-radius: 1em;
+    width: 20vw;
+    padding : 5vh;
+    margin : 2vh;
+    display: grid;
+    grid-template-rows: 60% 10% 16% 15%;
+    justify-items: center;
+    text-align :center
+}
+
+.shoe{
+    width: 100%;
+    object-fit: contain;
 }
 
 .btn-success, .btn-danger{
     width: 15vw;
+}
+
+@media only screen and (max-width: 1000px){  
+    .mainpage{
+        display: grid;
+        grid-template-columns: auto;
+        grid-row-gap: 1%;
+        justify-items: center;
+    }
+
+    .item{
+        width: 60%;
+    }
+
+    .btn-success, .btn-danger{
+        width: 40vw;
+    }
 }
